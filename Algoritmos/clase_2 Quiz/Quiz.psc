@@ -28,8 +28,11 @@ Proceso costo_agua
 					Escribir 'Demasiado gasto. Por favor disminuya el consumo y aporte a la conservación del medio ambiente.'
 					Escribir 'Este mes debes pagar: $',total_3+total_2+total_1+costo_ini
 				FinSi
+				
 			FinSi
+			
 		FinSi
+		
 	FinSi
 FinProceso
 
