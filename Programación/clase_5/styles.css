@@ -1,0 +1,39 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #fafafa;
+    color: rgb(65, 65, 65);
+    margin:  0 auto;
+    padding: 0;
+    width: 70%;
+
+}
+
+.primer-div{
+    background-color: rgb(223, 223, 223); /*Esto agrega un color al fondo*/
+    color: rgb(31, 31, 31); /*Esto agrega el color a la fuente*/
+    border: 1px solid black; 
+    font-family: 'Montserrat', sans-serif;
+    font-size:    14px;
+    padding: 0.5em;
+    margin:  0.5em;
+}
+
+.segundo-div{
+    background-color: rgb(31, 31, 31); /*Esto agrega un color al fondo*/
+    color: rgb(184, 184, 184); /*Esto agrega el color a la fuente*/
+    font-family: 'Open Sans', sans-serif;
+    font-size:    14px;
+    padding: 0.5em;
+    margin:  0.5em;
+}
+
+.h1{
+    text-align: center;
+}
+
+.text{
+    text-align: justify;
+}

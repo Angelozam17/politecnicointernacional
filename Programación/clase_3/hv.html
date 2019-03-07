@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+	<title>Hoja de vida</title>
+</head>
+<body bgcolor="#F7F7F7">
+	<div class="datos-foto">
+		<center class="img">
+			<img src="img.jpg" alt="angelo zambrano" width="150px"/>
+		</center>
+
+		<div class="datos-principales">
+			<h1 class="nombre">ANGELO ZAMBRANO</h1>
+			<h2 class="datos-principales__subtitulo">DESARROLLADOR WEB</h2>
+		</div>
+		
+	</div>	
+
+	<div class="container">	
+
+		<section class="perfil-contacto">
+			<article class="perfil">
+
+				<h3 class="titulo">PERFIL</h3>
+				<p class="texto">
+					Me especializo en aplicar el código de programación de servidor (PHP, Javascrtip, JAVA, .Net u otro lenguaje) y de Frontend (Javascript) para que la web cumpla con las funcionalidades de negocio: envíos de emails, gestión de pedidos, procesamiento de datos, consultas a base de datos, registros de usuarios, etc etc etc.
+				</p>
+
+			</article>
+			<article class="contacto">
+
+				<h3 class="titulo">CONTACTO</h3>
+				<span class="texto">Bogotá, Colombia Cr 41A Bis #68G 53</span>
+				<p class="texto">+57 (320) 8694066</p>
+				<a href="#" class="texto">www.github.com/angelozam17</a>
+
+			</article>
+		</section>
+
+		<section class="experiencia-educacion">
+			<article class="experiencia">
+
+				<h3 class="titulo">EXPERIENCIA</h3>
+					<h4 class="subtitulo">Diseñador Gráfico</h4>
+					<p class="texto">
+						Trabajé como diseñador de imagen general de varios proyectos como:logotipo, web, email y templates; utilizando los wireframes que generan los UX Designers, imágenes, tipografías y una paleta de colores que se ajusten al Look & Feel del cliente. En algunas ocasiones el diseñador gráfico hace también el trabajo de UX.
+					</p>
+
+					<h4 class="subtitulo">Maquetador de HTML5/CSS3</h4>
+					<p class="texto">
+						El maquetador es el encargado de convertir a HTML5, CSS3 y Javascript los mockups proporcionados por el diseñador gráfico. Es algo así como el Dr. Frankestein que da vida a lo que hasta entonces era una simple imagen estática. No es el responsable de la programación de la web, solo aplica la estructura básica (HTML, microformatos), la hoja de estilo y alguna que otra interacción con Javascript. Luego el programador cogerá este material para aplicar el código que completará la funcionalidad de la web.
+					</p>
+
+					<h4 class="subtitulo">Desarrollador Web</h4>
+					<p class="texto">
+						El desarrollador se encarga de aplicar el código de programación de servidor (PHP, Javascrtip, JAVA, .Net u otro lenguaje) y de Frontend (Javascript) para que la web cumpla con las funcionalidades de negocio: envíos de emails, gestión de pedidos, procesamiento de datos, consultas a base de datos, registros de usuarios, etc etc etc.
+					</p>
+
+
+			</article>
+			<article class="educacion">
+
+				<h3 class="titulo">EDUCACIÓN</h3>
+					<h4 class="subtitulo">Politécnico Internacional</h4>
+					<p class="texto">
+						Como egresado de Desarrollo de Software del Politécnico Internacional sé desarrollar, probar, mantener sistemas y aplicaciones mediante el uso de lenguajes de programación y administradores de bases de datos, brindando soporte técnico bilingüe en áreas de atención a usuarios. Y podrás trabajar en empresas de desarrollo de software, de seguridad informática,  y proveedoras de infraestructura tecnológica, o crear empresa para brindar soluciones de software. 
+					</p>
+
+			</article>
+		</section>
+	</div>
+
+
+	<style>
+		*{
+			box-sizing: border-box;
+		}
+		article{
+			position: relative;
+		}
+			.titulo{
+				margin-top: 50px;
+			}
+			.titulo::before{
+				content: "";	
+				width: 30px;
+				height: 1px;
+				background-color:black;
+				position: absolute;
+				top: 25px;
+				left: 25px;
+				margin-left: -25px;
+			}
+				.subtitulo{
+					margin-top:20px;
+					margin-bottom: 0px;
+				}
+
+		.texto{
+			font-size: 12px;
+		}
+		body{
+			margin: 0;
+			padding: 0;
+			color: black;
+			font-family: 'Raleway', sans-serif;
+			max-width: 800px;
+			margin: 30px auto;
+			width: 100%;
+			padding: 20px;
+			border:2px solid black;
+			height: 100%;
+			text-align: justify;
+			
+		}
+
+			.datos-foto{}
+
+				.datos-principales{
+					text-align: center;
+				}
+					.nombre{
+						border: 2px solid black;
+						width: 420px;
+						margin: 10px auto;
+						font-weight: 500;
+						padding: 10px;
+					}
+
+					.datos-principales__subtitulo{
+						font-size: .7em;
+						font-weight: light;
+						letter-spacing: 2px;
+						margin-top: 20px;
+						position: relative;
+					}
+
+					.datos-principales__subtitulo::before{
+						content: "";
+						width: 50px;
+						height: 1px;
+						background-color:black;
+						position: absolute;
+						top: -5px;
+						left: 50%;
+						margin-left: -25px;
+					}
+			
+			.container{
+				display: flex;
+				justify-content: space-between;
+			}
+				.perfil-contacto{
+					padding:20px;
+					;
+				}
+					.contacto{
+						margin-top:50%;
+					}
+						a{
+							text-decoration: none;
+							color:black;
+						}
+
+				.experiencia-educacion{
+					padding:20px;
+				}
+
+			
+
+			
+
+	</style>
+		
+
+</body>
+</html>
+

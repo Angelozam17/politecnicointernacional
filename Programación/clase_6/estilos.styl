@@ -1,0 +1,119 @@
+*
+  box-sizing: border-box
+
+body
+  margin: 0
+  padding: 0
+  width: 100%
+  background-color: #fafafa
+
+.nav
+  width: 100%
+  border-bottom: 1px solid #eee
+  box-shadow: 5px 0 10px #cacaca
+  position: fixed
+  top: 0
+  background-color: #fafafa
+
+.nav .logo
+  height: 50px
+  position: absolute
+  width: 50px
+  margin: 5px 50px
+
+.nav .logo .logo__img
+  height: 100%
+  position: absolute
+  width: 100%
+
+.nav ul
+  font-size: 14px
+  height: 60px
+  list-style: none
+  margin: 0 auto
+  margin-left: 150px
+  padding-left: 0
+  text-transform: uppercase
+
+.nav ul .list__item
+  cursor: pointer
+  display: inline-block
+  height: 100%
+  line-height: 60px
+  margin: auto -2px
+  text-align: center
+  width: 25%
+  min-width: 110px
+  position: relative
+  transition: 0.2s background-color ease
+
+.nav ul .list__item:hover
+  background-color: #eee
+
+.nav ul .list__item::before
+  content: ""
+  width: 1px
+  height: 40px
+  background-color: #eee
+  top: 50%
+  left: 0
+  position: absolute
+  margin-top: -20px
+
+.content
+  width: 80%
+  height: 100%
+  margin: 70px auto 10px
+  display: flex
+
+@media (max-width: 767px)
+  .content
+    display: block
+    .section--left,
+    .principal,
+    .section--right  
+      width 100%     
+    .principal
+      margin: 10px 0 10px 0
+
+
+.principal,
+.content__column
+
+  border: 1px solid #a1a1a1
+  border-radius: 25px
+  box-shadow: 5px 5px 10px -6px #929292
+  padding: 10px
+
+.content__column
+  background-color: white
+
+.square
+  width: 100%
+  height: 120px
+  background-color: #eee
+  border-radius: 20px
+  margin-left: auto
+  margin-right: auto
+
+.section--left
+  width: 20%
+
+.section--right
+  width: 30%
+
+.principal
+  background-color: #eee
+  width: 50%
+  margin-left: 10px
+  margin-right: 10px
+
+  &__square
+    background-color: white
+
+  &__square--top
+    height: 50px
+    margin-bottom: 10px
+
+  &__square--bottom
+    height 70vh

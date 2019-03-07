@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Navs and Forms</title>
+</head>
+<body>
+    <nav class="menu">
+        <ol>
+            <li class="menu-item">Home</li>
+            <li class="menu-item">About
+                <ol class="sub-menu">
+                    <li>Us</li>
+                    <li>History</li>
+                    <li>Others</li>
+                </ol>
+            </li>
+            <li class="menu-item">Contact</li>
+        </ol>
+    </nav>
+
+    <form method="POST" action="action.html">
+        <label>Fecha</label>
+        <input type="date">
+
+        <label>Hora</label>
+        <input type="time">
+
+        <label>Fecha y hora local</label>
+        <input type="datetime-local">
+
+        <label>Mes</label>
+        <input type="month">
+
+        <label>Semana</label>
+        <input type="week">
+
+        <label>Nombre</label>
+        <input type="text" name="name" placeholder="Escribe tu nombre" required="true">
+
+
+        <label>Apellido</label>
+        <input type="text" name="apellido" placeholder="Escribe tu apellido" required="true">
+
+
+        <label>Contraseña</label>
+        <input type="password" name="password" placeholder="Escribe tu contraseña" required="true">
+
+        <label>Edad</label>
+        <input type="number" name="edad" placeholder="Escribe tu edad" max="100" min="18" required="true">
+
+        <label>Comentario</label>
+
+        <textarea name="comentario" id="comentario" cols="30" rows="5" placeholder="Ingresa tu comentario"></textarea>
+
+        <hr>
+        
+
+        <h4>Estudios realizados</h4> 
+        <label>Primaria</label><input type="checkbox" >
+        <label>Bachillerato</label><input type="checkbox" >
+        <label>Universitario</label><input type="checkbox" >
+
+        <hr>
+
+        <h4>Género</h4>
+        <label>Masculino</label><input type="radio" name="genero" value="masculino">
+        <label>Femenino</label><input type="radio" name="genero" value="Femenino">
+
+        <hr>
+
+        <h4>Tipo de documento</h4>
+        <select required="true" name="document" id="document">
+            <option value="c-ciudadanía">Cédula de ciudadanía</option>
+            <option value="c-extrangera">Cédula de extrangería</option>
+            <option value="ti">Tarjeta de identidad</option>
+        </select>
+
+        <hr>
+
+        <input type="image" name="image" value="imagen" src="image/img.jpg">
+
+        <input type="reset" name="reset" value="Reestablecer">
+        <input type="submit" name="send" value="Registrar">
+        
+        
+    </form>
+</body>
+</html>

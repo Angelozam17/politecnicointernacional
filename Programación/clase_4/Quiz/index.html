@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+</head>
+<body>
+
+    <style>
+        body{
+            text-align: center;
+            background-color: #eee;
+        }
+        ul{
+            border: 1px solid brown;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            padding:10px;
+            background-color: rgba(165,42,42, .1);
+            
+        }
+
+        a{
+            text-decoration: none;
+            color: brown;
+            text-transform: uppercase;
+            margin: 10px;
+            
+        }
+        iframe{
+            border: 0px solid brown;
+        }
+
+    </style>
+    <ul>
+        <a href="iframe.html" target="open">¿Qué es un iframe?</a>
+        <a href="table.html" target="open">Etiqueta table</a>
+        <a href="tabla.html" target="open">Tablas</a>
+        <a href="video.html" target="open">Ver vídeo</a>
+    </ul>
+    <iframe src="tabla.html" frameborder="0" name="open" width="50%" height="800px"></iframe>
+</body>
+</html>
