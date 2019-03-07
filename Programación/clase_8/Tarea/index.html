@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!--CSS Main-->
+    <link rel="stylesheet" href="css/main.css">
+
+    <!--Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+
+    <title>Formulario | Angelo Zambrano</title>
+</head>
+<body>
+    <form action="datos-contacto.html" method="POST" class="form">
+        <fieldset class="form__datos-personales"> <!-- permite organizar en grupos los campos de un formulario. -->
+            
+            <legend>Datos personales</legend> <!-- crea un título para un grupos los campos (<fieldset>) de un formulario. -->
+            
+            <div class="datos-personales__name">
+                <label for="name" class="label">Nombre</label>
+                <div class="div-input">
+                    <input type="text" name="name" id="name" required>
+                    <i class="name far fa-user-circle"></i>
+                </div>
+            </div>
+            
+            <div class="datos-personales__surname">
+                <label for="surname" class="label">Apellidos</label>
+                <div class="div-input">
+                    <input type="text" name="surname" id="surname" required>
+                    <i class="far fa-user"></i>
+                </div>
+            </div>
+
+            <div class="datos-personales__age">
+                <label for="age" class="label">Edad</label>
+                <div class="div-input">
+                    <input type="number" name="age" max="100" min="10" id="age" required>
+                    <i class="far fa-calendar-check"></i>
+                </div>
+            </div>
+
+            <div class="datos-personales__document">
+                <label for="cc" class="label">Cédula de ciudadanía</label>
+                <div class="div-input">
+                    <input type="number" name="document" id="cc" maxlength="10" minlength="2" required>
+                    <i class="far fa-id-card"></i>
+                </div>
+            </div>
+
+            <div class="datos-personales__birthday">
+                <label for="birthday" class="label">Fecha de nacimiento</label>
+                <div class="div-input">
+                    <input type="date" name="birthday" id="birthday" min="1919-01-01" max="2019-01-01" value="2018-01-01" required>
+                    <i class="far fa-calendar-alt"></i>
+                </div>
+            </div>
+
+            <div class="datos-personales__btn">
+                <input type="reset" value="Restablecer">
+                <input type="submit" value="Enviar formulario">
+            </div>
+
+        </fieldset>
+    </form>
+</body>
+</html>
