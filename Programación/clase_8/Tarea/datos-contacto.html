@@ -4,9 +4,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Datos del contacto | Angelo Zambrano</title>
+
+    <!--CSS Main-->
+    <link rel="stylesheet" href="css/main.css">
+
+    <!--Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+
+    <title>Datos contacto | Angelo Zambrano</title>
 </head>
 <body>
-    <h1>Hola</h1>
+    
+    <form action="datos-usuario.html" method="POST" class="form">
+
+        <fieldset class="form__datos-personales">
+
+            <legend>Datos de contacto</legend>
+
+            <div>
+                <h4 class="label">Ciudad</h4>
+                <div class="div-input">
+
+                    <i class="fas fa-map-marked-alt"></i>
+                    <select name="city" class="ciudad">
+                        <option value="0">Selecciona tu ciudad</option>
+                        <option value="1">Bogotá</option>
+                        <option value="2">Medellín</option>
+                        <option value="3">Cali</option>
+                        <option value="4">Barranquilla</option>
+                        <option value="5">Cartagena </option>
+                        <option value="6">Cúcuta</option>
+                        <option value="7">Soledad</option>
+                        <option value="8">Ibagué</option>
+    
+                    </select> 
+                </div> 
+            </div>
+
+
+            <div>
+                <label for="address" class="label">Dirección</label>
+                <div class="div-input">
+                    <input type="text" name="address" id="address" required>
+                    <i class="name fas fa-map-marker-alt"></i>
+                </div>
+            </div>
+
+
+            <div>
+                <label for="email" class="label">Email</label>
+                <div class="div-input">
+                    <input type="email" name="email" id="email" required>
+                    <i class="fas fa-at"></i>
+                </div>
+            </div>
+
+
+            <div>
+                <label for="tel" class="label">Teléfono</label>
+                <div class="div-input">
+                    <input type="tel" name="tel" id="tel" maxlength="10" required>
+                    <i class="fas fa-phone"></i>
+                </div>
+            </div>
+
+
+            <div class="datos-personales__btn">
+                <input type="reset" value="Restablecer">
+                <input type="submit" value="Enviar formulario">
+            </div>
+
+        </fieldset>
+
+    </form>
 </body>
 </html>

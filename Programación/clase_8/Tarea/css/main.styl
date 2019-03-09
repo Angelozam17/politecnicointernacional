@@ -70,22 +70,20 @@ a
         display block
         //margin-bottom 10px
         font-size 1.3rem
+        font-weight: 300
         color #94aab0
         position relative
         &::after
           position absolute
-          top   35px
-          right 11px
-          content ""
-          width:  5px
-          height: 5px
-          border-radius: 50%
-          background-color: brown
-          font-size: 2em
+          top -10px
+          content "*"
+          color: brown
+          font-size: 3em
           z-index 1
 
       input 
       label
+      select
         font-family:inherit
 
 
@@ -93,12 +91,16 @@ a
       input[type="email"]
       input[type="number"]
       input[type="date"]
+      input[type="tel"]
+      input[type="password"]
+      select
         display block
         width 100%
         padding 12px
         padding-left 40px
         border 1px solid #cfd9db
         border-radius .30em
+        outline: none
         background-color #ffffff
         box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.08)
         /*-webkit-appearance: none;
@@ -111,6 +113,15 @@ a
           //outline none
           border-color #2c97de
           box-shadow: 0 0 10px rgba(44, 151, 222, 0.2)
+
+      input:invalid
+        border 1px solid brown
+        background-color: lighten(brown, 95%)
+      
+      input:valid
+        border 1px solid lightgreen
+        background-color: lighten(green, 95%)
+
 
     .datos-personales__btn
       display flex

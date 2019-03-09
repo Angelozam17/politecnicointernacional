@@ -65,34 +65,36 @@ input
 .form fieldset div .label {
   display: block;
   font-size: 1.3rem;
+  font-weight: 300;
   color: #94aab0;
   position: relative;
 }
 .form fieldset div .label::after {
   position: absolute;
-  top: 35px;
-  right: 11px;
-  content: "";
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background-color: #a52a2a;
-  font-size: 2em;
+  top: -10px;
+  content: "*";
+  color: #a52a2a;
+  font-size: 3em;
   z-index: 1;
 }
-.form fieldset div label {
+.form fieldset div label,
+.form fieldset div select {
   font-family: inherit;
 }
 .form fieldset div input[type="text"],
 .form fieldset div input[type="email"],
 .form fieldset div input[type="number"],
-.form fieldset div input[type="date"] {
+.form fieldset div input[type="date"],
+.form fieldset div input[type="tel"],
+.form fieldset div input[type="password"],
+.form fieldset div select {
   display: block;
   width: 100%;
   padding: 12px;
   padding-left: 40px;
   border: 1px solid #cfd9db;
   border-radius: 0.3em;
+  outline: none;
   background-color: #fff;
   box-shadow: inset 0 1px 1px rgba(0,0,0,0.08);
 /*-webkit-appearance: none;
@@ -104,9 +106,20 @@ input
 .form fieldset div input[type="text"]:focus,
 .form fieldset div input[type="email"]:focus,
 .form fieldset div input[type="number"]:focus,
-.form fieldset div input[type="date"]:focus {
+.form fieldset div input[type="date"]:focus,
+.form fieldset div input[type="tel"]:focus,
+.form fieldset div input[type="password"]:focus,
+.form fieldset div select:focus {
   border-color: #2c97de;
   box-shadow: 0 0 10px rgba(44,151,222,0.2);
+}
+.form fieldset div input:invalid {
+  border: 1px solid #a52a2a;
+  background-color: #fcf3f3;
+}
+.form fieldset div input:valid {
+  border: 1px solid #90ee90;
+  background-color: #ecffec;
 }
 .form fieldset .datos-personales__btn {
   display: flex;

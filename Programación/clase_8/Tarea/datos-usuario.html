@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!--CSS Main-->
+    <link rel="stylesheet" href="css/main.css">
+
+    <!--Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+
+    <title>Datos usuarios | Angelo Zambrano</title>
+</head>
+<body>
+    <form class="form" action="end.html" method="POST" id="js-form">
+
+        <fieldset class="form__datos-personales">
+            <legend>Datos usuario</legend>
+
+            <div>
+                <label for="username" class="label">Nombre de usuario</label>
+                <div class="div-input">
+                    <input type="text" name="username" id="username" required>
+                    <i class="far fa-user"></i>
+                </div>
+            </div>
+
+            <div>
+                <label for="password" class="label">Contraseña</label>
+                <div class="div-input">
+                    <input type="password" name="password" id="password" required>
+                    <i class="fas fa-key"></i>
+                </div>
+            </div>
+
+            <div>
+                <label for="c_password" class="label">Confirma tu contraseña</label>
+                <div class="div-input">
+                    <input type="password" name="password" id="c_password" required>
+                    <i class="fas fa-unlock"></i>
+                </div>
+            </div>
+
+            <div class="datos-personales__btn">
+                <input type="reset" value="Restablecer">
+                <input type="submit" value="Enviar formulario">
+            </div>
+
+        </fieldset>
+
+    </form>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
