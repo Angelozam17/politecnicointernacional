@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!--CSS-->
+    <link rel="stylesheet" href="css/estilos.css">
+
+    <!--Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+    <title>Form & Maps</title>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="form">
+            <h1 class="title">Formulario</h1>
+
+            <div class="sub-div">
+                <header class="header">
+                    Datos personales
+                </header>
+
+
+
+                <form action="" method="POST" class="formulario">
+
+                    <fieldset>
+
+                        <div>
+                            <label for="name">Nombres</label>
+                            <input type="text" class="" id="name">
+                        </div>
+
+                        <div>
+                            <label for="age">Edad</label>
+                            <input type="number" class="" id="age" min="18" max="100">
+                        </div>
+
+                        <div>
+                            <label for="profession">Profesión</label>
+                            <input type="text" class="" id="profession">
+                        </div>
+
+                        <input type="submit" value="Enviar">
+
+                    </fieldset>
+                </form>
+
+
+
+            </div>
+        </div>
+
+        <div class="map">
+            <h1 class="title">Mapa</h1>
+            <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.642941504114!2d-74.05978598537381!3d4.657600243326966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9a5ce9f3497f%3A0xe0cf1d7feb4b448b!2sCl.+73+%2310-45%2C+Bogot%C3%A1!5e0!3m2!1ses!2sco!4v1552313219999" 
+            width="100%" 
+            height="300" 
+            frameborder="0" 
+            style="border:0" 
+            allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+
+</body>
+</html>
