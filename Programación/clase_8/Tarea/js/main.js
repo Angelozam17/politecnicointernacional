@@ -6,9 +6,8 @@ const $c_password = document.getElementById('c_password');
 
 //Evento
 $form.addEventListener('submit', function(e){
-    e.defaultPrevented;
-    console.log(e)
     if($password.value != $c_password.value){
-        alert('La contraseña no es correcta.');
+        alert('La contraseña con coincide.');
+        e.preventDefault();
     };
 });

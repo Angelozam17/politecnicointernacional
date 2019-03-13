@@ -1,0 +1,63 @@
+
+body
+    font-family: 'Poppins', sans-serif;
+
+*
+    box-sizing: border-box;
+
+.title
+    margin 5px 0 0 0
+    font-size: 1rem
+
+.tags
+    margin 0
+    font-size: .8rem
+    font-style: italic 
+    color gray
+    
+
+.container
+    width: 90%
+    margin-top 50px
+    margin-left auto
+    margin-right auto
+    padding 1em
+
+    display flex
+    flex-wrap wrap
+    align-content: space-around
+
+    .container-wrapper
+        width: 300px
+        padding 10px
+        margin-bottom 50px
+        margin-left auto
+        margin-right: auto
+        border 1px solid #f1f1f1
+        transition: .2s box-shadow ease
+
+        img 
+            width 100%
+        
+        .btn-readmore
+            width: 50%
+            display block
+            margin 15px auto  10px
+            padding 10px 20px
+
+            background-color: darken(gray, 10%)
+            color #fff
+            border none
+            border-radius 10px
+            outline none
+            cursor pointer
+            transition: .2s background-color ease
+            
+    .container-wrapper:hover
+        box-shadow: 0 5px 15px darken(#eee, 20%)
+
+        & .btn-readmore
+            background-color: darken(gray, 30%)
+
+        
+
