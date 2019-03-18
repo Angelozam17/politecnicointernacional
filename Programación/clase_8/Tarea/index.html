@@ -47,12 +47,33 @@
             </div>
 
             <div class="datos-personales__document">
-                <label for="cc" class="label">Cédula de ciudadanía</label>
+                <label for="cc" class="label">Documento</label>
+
+                
+                <ul class="form-list">
+                    <li>
+                        <input type="radio" name="cedula" id="tarjeta">
+                        <label for="tarjeta">Tarjeta de identidad</label>
+                    </li>
+
+                    <li>
+                        <input type="radio" name="cedula" id="cedula">
+                        <label for="cedula">Cédula de ciudadanía</label>
+                    </li>
+
+                    <li>
+                        <input type="radio" name="cedula" id="passport">
+                        <label for="passport">Pasaporte</label>
+                    </li>
+                </ul>
+
                 <div class="div-input">
                     <input type="number" name="document" id="cc" maxlength="10" minlength="2" required>
                     <i class="far fa-id-card"></i>
                 </div>
             </div>
+
+
 
             <div class="datos-personales__birthday">
                 <label for="birthday" class="label">Fecha de nacimiento</label>

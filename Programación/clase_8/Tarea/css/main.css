@@ -20,6 +20,9 @@ a {
   color: #2c97de;
   text-decoration: none;
 }
+ul {
+  list-style: none;
+}
 /*-----------------------------
 
   Formulario
@@ -121,6 +124,12 @@ input
   border: 1px solid #90ee90;
   background-color: #ecffec;
 }
+.form fieldset div input[type="radio"] {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top: -7px;
+}
 .form fieldset .datos-personales__btn {
   display: flex;
 }
@@ -142,4 +151,14 @@ input
 .form fieldset .datos-personales__btn input[type="submit"]:active,
 .form fieldset .datos-personales__btn input[type="reset"]:active {
   transform: scale(0.9);
+}
+.form fieldset .datos-personales__document .form-list {
+  list-style: none;
+  position: relative;
+}
+.form fieldset .datos-personales__document .form-list li {
+  display: inline-block;
+  position: relative;
+  margin: 0 26px 16px 0;
+  padding-left: 25px;
 }
