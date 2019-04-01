@@ -1,6 +1,6 @@
 Algoritmo zoologo
 	x<- 1
-	base <- 60000
+	base <- 600000
 	
 	Repetir
 		Escribir "Nombre vendedor"
