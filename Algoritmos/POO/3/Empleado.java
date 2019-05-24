@@ -1,34 +1,22 @@
 package horasextras;
-import java.util.Scanner;
+import javax.swing.JOptionPane;
 
 public class Empleado {
-    Scanner tec = new Scanner(System.in);
+
     String name, surname;
     int salary;
     byte HED, HEN, HEDF, HENF;
     
     public void personalData(){
         
-        System.out.println("Nombre: ");
-        name = tec.nextLine();
-        
-        System.out.println("Apellidos: ");
-        surname = tec.nextLine();
-        
-        System.out.println("Salario: ");
-        salary = tec.nextInt();
-        
-        System.out.println("# de horas extras diurnas.");
-        HED = tec.nextByte();
-        
-        System.out.println("# de horas extras nocturnas.");
-        HEN = tec.nextByte();
-        
-        System.out.println("# de horas extras diurnas festivas.");
-        HEDF = tec.nextByte();
-        
-        System.out.println("# de horas extras nocturnas festivas.");
-        HENF = tec.nextByte();
+        name = JOptionPane.showInputDialog(null ,"Digita tu nombre");
+        surname = JOptionPane.showInputDialog(null ,"Digita tus apellidos");
+        salary = Integer.parseInt(JOptionPane.showInputDialog(null ,"Digita tu salario"));
+       
+        HED = Byte.parseByte(JOptionPane.showInputDialog(null ,"Número de horas extras diurnas."));
+        HEN = Byte.parseByte(JOptionPane.showInputDialog(null ,"Número de horas extras nocturnas."));
+        HEDF = Byte.parseByte(JOptionPane.showInputDialog(null ,"Número de horas extras diurnas festivas."));
+        HENF = Byte.parseByte(JOptionPane.showInputDialog(null ,"Número de horas extras nocturnas festivas."));
             
     }
     
@@ -42,13 +30,9 @@ public class Empleado {
         
         double totalHE = valueHED + valueHEN + valueHEDF + valueHENF;
         
-        System.out.println("Horas extras diurnas trabajadas: $" + valueHED);
-        System.out.println("Horas extras nocturnas trabajadas: $" + valueHEN);
-        System.out.println("Horas extras diurnas festivas trabajadas: $" + valueHEDF);
-        System.out.println("Horas extras nocturnas festivas trabajadas: $" + valueHENF);
-        
-        System.out.println("TOTAL DE HORAS EXTRAS TRABAJADAS: $" + totalHE);
-        System.out.println("TOTAL DE SALARIO + HORAS EXTRAS: $" + (totalHE + salary));
+        JOptionPane.showMessageDialog(null ,"Horas extras diurnas trabajadas: $" + valueHED + "\n" + "Horas extras nocturnas trabajadas: $" + valueHEN + "\n" + "Horas extras diurnas festivas trabajadas: $" + valueHEDF + "\n" + "Horas extras nocturnas festivas trabajadas: $" + valueHENF);
+        JOptionPane.showMessageDialog(null , "TOTAL DE HORAS EXTRAS TRABAJADAS: $" + totalHE + "\n" + "TOTAL DE SALARIO + HORAS EXTRAS: $" + (totalHE + salary));
+
         
         
     }
