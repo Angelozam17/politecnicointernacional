@@ -1,3 +1,4 @@
+//Switch
 package condicionales;
 import javax.swing.*;
 
