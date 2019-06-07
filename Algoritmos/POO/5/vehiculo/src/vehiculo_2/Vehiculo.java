@@ -5,26 +5,33 @@ public class Vehiculo {
     
     private String marca, modelo;
     private int velocidad;
-    private boolean encendido;
+    private boolean encendido = false;
     
     public Vehiculo(){
-        String res = JOptionPane.showInputDialog("¿Deseas encender el vehiculo?");
-        System.out.println(res);
-        
-        if("si".equals(res)) {
-            encendido = true;   
-            System.out.println("Se ha encendido el vehiculo...");
-            acelerar();
+        while(true){
+            String res = JOptionPane.showInputDialog("¿Qué deseas hacer? \n" +
+                                                  "A. Encender \n" +
+                                                  "B. Acelerar \n" +
+                                                  "C. Frenar \n" +
+                                                  "D. Apagar");
+            
+            if(res.equals("A") || res.equals("Encender") && encendido == false){
+                encendido = true;   
+                System.out.println("Se ha encendido el vehículo.");
+                
+            }else if(res.equals("A") || res.equals("Encender") && encendido == true){
+                System.out.println("El auto ya está encendido.");
+            }
         }
-        else
-            System.out.println("No se ha encendido el vehiculo.");           
+          
+                              
     }
     
     public void acelerar(){
         while(encendido && velocidad <= 200){
             System.out.println(velocidad + "km/h");
             velocidad++;
-            frenar();
+
         }
     }
     
@@ -33,20 +40,5 @@ public class Vehiculo {
             System.out.println(velocidad + "km/h");
             velocidad--;
         }
-    }
-    
-    public void setCaptura(String Ma, String Mo, int Ve, boolean encendido){
-        this.marca = Ma;
-        this.modelo = Mo;
-        this.velocidad = Ve;
-        this.encendido = encendido;
-    }
-    
-    public void mostrar(){
-        JOptionPane.showMessageDialog(null, "La marca es " + marca + ".\n" +
-                                    "El modelo es " + modelo + ".\n" +
-                                    "La velocidad es " + velocidad + ".\n" +
-                                    "Su estado es " + encendido + ".\n"
-        );
-    }
+    }        
 }
