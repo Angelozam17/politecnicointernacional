@@ -1,7 +1,7 @@
 package vehiculo_3;
 import javax.swing.*;
 
-public class Vehiculo_3 {
+public final class Vehiculo_3 {
     
     String marca, modelo;
     int velocidad = 0;
