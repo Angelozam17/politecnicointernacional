@@ -12,9 +12,9 @@ public class CambioDivisas {
 		gananciaPesos = Math.round(gananciaPesos*100)/100d;
 		gananciaDolares = (convertirADolaresD() - convertirADolaresU());
 		gananciaDolares = Math.round(gananciaDolares*100)/100d;
-		System.out.println("Son $" + convertirADolaresD() + " dólares.");
+		System.out.println("Son $" + convertirADolaresD() + " dolares.");
 		System.out.println("Ganancia pesos $" + gananciaPesos);
-		System.out.println("Ganancia dólares $" + gananciaDolares);
+		System.out.println("Ganancia dolares $" + gananciaDolares);
 	}
 	
 	//GETTERS

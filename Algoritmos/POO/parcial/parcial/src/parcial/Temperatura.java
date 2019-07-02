@@ -8,13 +8,13 @@ public class Temperatura {
     public Temperatura(double gc){
         this.gradosCentigrados = gc;
         CalcGrados();
-        System.out.println("Conversión de celsius a Fahrenheit " + gradosFarenheit);
+        System.out.println("Conversin de celsius a Fahrenheit " + gradosFarenheit);
     }
     
     public Temperatura() {
     	gradosCentigrados = Double.parseDouble(JOptionPane.showInputDialog("Convertidor de grados centigrados a farenheit"));
     	CalcGrados();
-    	System.out.println("Conversión de celsius a Fahrenheit " + gradosFarenheit);
+    	System.out.println("Conversin de celsius a Fahrenheit " + gradosFarenheit);
     }
     
     

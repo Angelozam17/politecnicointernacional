@@ -5,13 +5,13 @@ import javax.swing.JOptionPane;
 public class Fecha {
 	
 	private int dia, mes, year;
-	String nYear = null;
+	String nYear;
 	
 	//Construtors
 	public Fecha() {
-		dia = Integer.parseInt(JOptionPane.showInputDialog("Digita el día"));
+		dia = Integer.parseInt(JOptionPane.showInputDialog("Digita el dia"));
 		mes = Integer.parseInt(JOptionPane.showInputDialog("Digita el mes"));
-		year = Integer.parseInt(JOptionPane.showInputDialog("Digita el año"));
+		year = Integer.parseInt(JOptionPane.showInputDialog("Digita el ano"));
 		
 		
 		
@@ -28,7 +28,7 @@ public class Fecha {
 			case 10: nYear = "octubre";    break;
 			case 11: nYear = "noviembre";  break;
 			case 12: nYear = "diciembre";  break;
-			default: System.out.println("Digita un mes válido.");
+			default: System.out.println("Digita un mes valido.");
 		
 		}
 		
