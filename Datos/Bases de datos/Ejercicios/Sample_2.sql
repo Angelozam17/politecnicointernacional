@@ -1,33 +1,60 @@
-create database compugreif;
-drop table if exists articulos;
+drop table if exists estudiantes;
 
-use compugreif;
-create table articulos(
-	
-	codigo int(5) zerofill auto_increment primary key,
-	nombre varchar(30) not null,
-	descripcion varchar(90),
-	precio float(10) not null,
-	cantidad tinyint (99) not null
+create database datos_alumnos;
+
+/* SELECCIONAR LA BASE DE DATOS QUE SE VA A USAR */
+use datos_alumnos;
+
+
+/* CREAR UNA TABLA */
+create table estudiantes(
+
+	cedula int(20) not null primary key,
+	nombre varchar(50) not null,
+	correo varchar(60),
+	telefono varchar(14)
+
 );
 
-select * from articulos;
-select * from articulos where nombre = 'impresora';
-select * from articulos where precio >= 500;
-select * from articulos where cantidad < 30;
-select nombre, descripcion from articulos where precio != 100;
 
-insert into articulos (nombre, descripcion, precio, cantidad)
-value('impresora', 'Epson Stylus C45', 400.8, 10);
+/* SELECCIONAR TODOS LOS REGISTROS DE UNA TABLA */
+select * from estudiantes;
 
-insert into articulos (nombre, descripcion, precio, cantidad)
-value('impresora', 'Epson Stylus C85', 500, 30);
+select telefono, cedula from estudiantes where nombre = 'Jhonnatan Steven Guerrero Rocha';
 
-insert into articulos (nombre, descripcion, precio, cantidad)
-value('monitor', 'Samsung 14', 800, 10);
+select nombre from estudiantes where cedula = 1030613028;
 
-insert into articulos (nombre, descripcion, precio, cantidad)
-value('teclado', 'ingles Biswal', 100, 50);
+select * from estudiantes where correo = 'andresfelipetorrescurrea@gmail';
 
-insert into articulos (nombre, descripcion, precio, cantidad)
-value('teclado', 'español Biswal', 90, 50);
+
+/* DESCRIBE */
+describe estudiantes;
+
+/* INSERTA DATOS A LA TABLA */
+insert into estudiantes(cedula, nombre, correo, telefono)
+values(101428262, 'Andrés Jiménez Ramírez', 'andresfelipetorrescurrea@gmail.com', '3202028799'); 
+
+insert into estudiantes(cedula, nombre, correo, telefono)
+values(1071170458, 'Jhonnatan Steven Guerrero Rocha', 'jhonnatangue99@hotmail.com', '3123432344'); 
+
+insert into estudiantes(cedula, nombre, correo, telefono)
+values(1094241303, 'Vanessa Guisselle Pastrana Rangel', 'vanparan@gmail.com', '3008836558'); 
+
+insert into estudiantes(cedula, nombre, correo, telefono)
+values(1015472942, 'Andres Felipe Garcia Ducuara', 'andressducu.14@hotmail.com', '3194111008'); 
+
+insert into estudiantes(cedula, nombre, correo, telefono)
+values(1070017042, 'Carlos Duvan Gonzalez Ardila', 'ardiladuvan7@gmail.com', '3108889050'); 
+
+insert into estudiantes(cedula, nombre, correo, telefono)
+values(1030613028, 'Jeniffer Gonzaliaz Moreno', 'jeinlo_afri@hotmail.com', '3213800862'); 
+
+insert into estudiantes(cedula, nombre, correo, telefono)
+values(1019087513, 'Andres Felipe Torres Currea', 'andresfelipetorrescurrea@gmail.com', '3008475552'); 
+
+/* Eliminar */
+delete from estudiantes where nombre = 'Andres Felipe Garcia Ducuara';
+delete from estudiantes where telefono = 3213800862;
+
+update estudiantes set nombre = 'Andrés Felipe Jiménez Ramírez' where nombre = 'Andrés Jiménez Ramírez';
+update estudiantes set cedula = 1014282625 where cedula = 101428262;
