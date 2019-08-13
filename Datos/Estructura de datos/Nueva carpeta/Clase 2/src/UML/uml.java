@@ -32,10 +32,10 @@ public class uml extends JFrame {
 	/**
 	 * Launch the application.
 	 */
-	double weight_v[] = new double[4];
-	double height_v[] = new double[4];
-	String id_v[] = new String[4];
-	byte age_v[] = new byte[4];
+	double weight_v[] = new double[5];
+	double height_v[] = new double[5];
+	String id_v[] = new String[5];
+	byte age_v[] = new byte[5];
 	
 	byte i = 0;
 	double imc_v;
@@ -161,7 +161,12 @@ public class uml extends JFrame {
 		btnMostrar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				
+			    for(byte j = 0; j < 4; j++){
+                                System.out.println("Su peso es: " + weight_v[j] + "\n" +
+                                                   "Su estatura es: " + height_v[j] +  "\n" +
+                                                   "Su código es: " + id_v[j] + "\n" +
+                                                   "Su edad es: "+ age_v[j] + "\n");
+                            }
 				
 			}
 		});
@@ -256,6 +261,8 @@ public class uml extends JFrame {
 		btnCapturar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
+                                imc_v = (Double.parseDouble(weight.getText()) / (Double.parseDouble(height.getText()) * Double.parseDouble(height.getText())));
+				imc.setText("" + imc_v);
 				weight_v[i] = Double.parseDouble(weight.getText());		
 				height_v[i] = Double.parseDouble(height.getText());	
 				age_v[i] = Byte.parseByte(age.getText());	
@@ -263,8 +270,22 @@ public class uml extends JFrame {
 				i++;
 				registro.setText("" + i);
 				
+                                
+				
+				if(imc_v <= 18.5) status.setText("Estás demasiado delgado.");
+				else if(imc_v > 18.8 && imc_v <= 24.9) status.setText("Estás en el peso ideal.");
+				else if(imc_v > 24.9 && imc_v <= 29.9) status.setText("Estás en sobrepeso.");
+				else if(imc_v > 29.9 && imc_v <= 39.9) status.setText("Estás obeso.");
+				else if(imc_v > 39.9) status.setText("Obesidad mórbida.");
+                                
 				limpiar();
 				
+                                if(i == 5){
+                                    weight.disable();
+                                    height.disable();
+                                    age.disable();
+                                    id.disable();
+                                }
 			}
 		});
 		panel_2.add(btnCapturar);
@@ -282,15 +303,7 @@ public class uml extends JFrame {
 		JButton btnEstadsticas = new JButton("ESTAD\u00CDSTICAS");
 		btnEstadsticas.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				imc_v = (Double.parseDouble(weight.getText()) / (Double.parseDouble(height.getText()) * Double.parseDouble(height.getText())));
-				imc.setText("" + imc_v);
-				
-				if(imc_v <= 18.5) status.setText("Est�s demasiado delgado.");
-				else if(imc_v > 18.8 && imc_v <= 24.9) status.setText("Est�s en el peso ideal.");
-				else if(imc_v > 24.9 && imc_v <= 29.9) status.setText("Est�s en sobrepeso.");
-				else if(imc_v > 29.9 && imc_v <= 39.9) status.setText("Est�s obeso.");
-				else if(imc_v > 39.9) status.setText("Obesidad m�rbida.");
-				
+								
 			}
 		});
 		panel_2.add(btnEstadsticas);
