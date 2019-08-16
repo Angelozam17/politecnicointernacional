@@ -21,6 +21,9 @@ public class questions extends javax.swing.JFrame {
         initComponents();
         graduado.add(graduado_y);
         graduado.add(graduado_n);
+        
+        creditos.add(creditos_y);
+        creditos.add(creditos_n);
     }
 
     /**
@@ -33,7 +36,7 @@ public class questions extends javax.swing.JFrame {
     private void initComponents() {
 
         graduado = new javax.swing.ButtonGroup();
-        buttonGroup1 = new javax.swing.ButtonGroup();
+        creditos = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
@@ -45,8 +48,8 @@ public class questions extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
+        creditos_y = new javax.swing.JRadioButton();
+        creditos_n = new javax.swing.JRadioButton();
         jLabel3 = new javax.swing.JLabel();
         jComboBox2 = new javax.swing.JComboBox<>();
         jLabel7 = new javax.swing.JLabel();
@@ -55,7 +58,6 @@ public class questions extends javax.swing.JFrame {
         btn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(720, 480));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setPreferredSize(new java.awt.Dimension(720, 480));
@@ -105,21 +107,21 @@ public class questions extends javax.swing.JFrame {
         jLabel6.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         jLabel6.setText("Créditos");
 
-        jRadioButton1.setBackground(new java.awt.Color(255, 255, 255));
-        jRadioButton1.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
-        jRadioButton1.setText("Sí");
-        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
+        creditos_y.setBackground(new java.awt.Color(255, 255, 255));
+        creditos_y.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
+        creditos_y.setText("Sí");
+        creditos_y.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton1ActionPerformed(evt);
+                creditos_yActionPerformed(evt);
             }
         });
 
-        jRadioButton2.setBackground(new java.awt.Color(255, 255, 255));
-        jRadioButton2.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
-        jRadioButton2.setText("No");
-        jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
+        creditos_n.setBackground(new java.awt.Color(255, 255, 255));
+        creditos_n.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
+        creditos_n.setText("No");
+        creditos_n.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton2ActionPerformed(evt);
+                creditos_nActionPerformed(evt);
             }
         });
 
@@ -195,12 +197,12 @@ public class questions extends javax.swing.JFrame {
                             .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(graduado_y)
                                 .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jRadioButton1))
+                                .addComponent(creditos_y))
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                             .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(graduado_n)
                                 .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jRadioButton2))
+                                .addComponent(creditos_n))
                             .addGap(127, 127, 127))
                         .addGroup(jPanel3Layout.createSequentialGroup()
                             .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -223,8 +225,8 @@ public class questions extends javax.swing.JFrame {
                     .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                    .addComponent(jRadioButton1)
-                    .addComponent(jRadioButton2)
+                    .addComponent(creditos_y)
+                    .addComponent(creditos_n)
                     .addComponent(jLabel6))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -303,13 +305,13 @@ public class questions extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_graduado_nActionPerformed
 
-    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
+    private void creditos_yActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_creditos_yActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton1ActionPerformed
+    }//GEN-LAST:event_creditos_yActionPerformed
 
-    private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
+    private void creditos_nActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_creditos_nActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton2ActionPerformed
+    }//GEN-LAST:event_creditos_nActionPerformed
 
     private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
         // TODO add your handling code here:
@@ -374,7 +376,9 @@ public class questions extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton back;
     private javax.swing.JButton btn;
-    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.ButtonGroup creditos;
+    private javax.swing.JRadioButton creditos_n;
+    private javax.swing.JRadioButton creditos_y;
     private javax.swing.ButtonGroup graduado;
     private javax.swing.JRadioButton graduado_n;
     private javax.swing.JRadioButton graduado_y;
@@ -391,7 +395,5 @@ public class questions extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
     // End of variables declaration//GEN-END:variables
 }

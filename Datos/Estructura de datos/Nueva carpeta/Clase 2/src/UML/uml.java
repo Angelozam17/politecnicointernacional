@@ -19,6 +19,7 @@ import javax.swing.UIManager;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.JOptionPane;
 import net.miginfocom.swing.MigLayout;
 
 public class uml extends JFrame {
@@ -39,6 +40,7 @@ public class uml extends JFrame {
 	
 	byte i = 0;
 	double imc_v;
+        byte n_delgados = 0, n_gordos = 0, n_normal = 0;
 	
 	public static void main(String[] args) {
 		
@@ -268,15 +270,30 @@ public class uml extends JFrame {
 				age_v[i] = Byte.parseByte(age.getText());	
 				id_v[i] = id.getText();
 				i++;
-				registro.setText("" + i);
+                                registro.setText("" + i);
 				
                                 
 				
-				if(imc_v <= 18.5) status.setText("Estás demasiado delgado.");
-				else if(imc_v > 18.8 && imc_v <= 24.9) status.setText("Estás en el peso ideal.");
-				else if(imc_v > 24.9 && imc_v <= 29.9) status.setText("Estás en sobrepeso.");
-				else if(imc_v > 29.9 && imc_v <= 39.9) status.setText("Estás obeso.");
-				else if(imc_v > 39.9) status.setText("Obesidad mórbida.");
+				if(imc_v <= 18.5){
+                                    status.setText("Estás demasiado delgado.");
+                                    n_delgados++;
+                                    
+                                }else if(imc_v > 18.8 && imc_v <= 24.9) {
+                                    status.setText("Estás en el peso ideal.");
+                                    n_normal++;
+                                }
+				else if(imc_v > 24.9 && imc_v <= 29.9) {
+                                    status.setText("Estás en sobrepeso.");
+                                    n_gordos++;
+                                }
+				else if(imc_v > 29.9 && imc_v <= 39.9) {
+                                    status.setText("Estás obeso.");
+                                    n_gordos++;
+                                }
+				else if(imc_v > 39.9) {
+                                    status.setText("Obesidad mórbida.");
+                                    n_gordos++;
+                                }
                                 
 				limpiar();
 				
@@ -303,7 +320,11 @@ public class uml extends JFrame {
 		JButton btnEstadsticas = new JButton("ESTAD\u00CDSTICAS");
 		btnEstadsticas.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-								
+			    	
+                            JOptionPane.showMessageDialog(null, "Hay " + n_normal + " personas en el peso ideal.\n" +
+                                                                "Hay " + n_delgados + " personas delgadas.\n" +
+                                                                "Hay " + n_gordos + " personas gordas.");
+                            
 			}
 		});
 		panel_2.add(btnEstadsticas);

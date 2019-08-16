@@ -5,6 +5,8 @@
  */
 package com.politecnicointernacional.angelozambrano;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author ANGELO
@@ -144,9 +146,13 @@ public class email extends javax.swing.JFrame {
     private void btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActionPerformed
         // TODO add your handling code here:
         
-        questions np = new questions();
-        np.show();
-        this.hide();
+        if(document.getText().equals("") || password.getText().equals("")){
+            JOptionPane.showMessageDialog(null, "Todos los campos son obligatorios.");
+        }else{
+            questions np = new questions();
+            np.show();
+            this.hide();
+        }
         
     }//GEN-LAST:event_btnActionPerformed
 
