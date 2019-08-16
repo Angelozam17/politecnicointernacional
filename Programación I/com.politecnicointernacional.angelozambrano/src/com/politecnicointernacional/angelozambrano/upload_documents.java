@@ -5,6 +5,8 @@
  */
 package com.politecnicointernacional.angelozambrano;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author ANGELO
@@ -36,17 +38,17 @@ public class upload_documents extends javax.swing.JFrame {
         back = new javax.swing.JButton();
         btn = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
-        jCheckBox1 = new javax.swing.JCheckBox();
+        check_1 = new javax.swing.JCheckBox();
         jButton2 = new javax.swing.JButton();
-        jCheckBox2 = new javax.swing.JCheckBox();
+        check_2 = new javax.swing.JCheckBox();
         jButton3 = new javax.swing.JButton();
-        jCheckBox3 = new javax.swing.JCheckBox();
+        check_3 = new javax.swing.JCheckBox();
         jLabel7 = new javax.swing.JLabel();
         jButton4 = new javax.swing.JButton();
-        jCheckBox4 = new javax.swing.JCheckBox();
+        check_4 = new javax.swing.JCheckBox();
         jLabel8 = new javax.swing.JLabel();
         jButton5 = new javax.swing.JButton();
-        jCheckBox5 = new javax.swing.JCheckBox();
+        check_5 = new javax.swing.JCheckBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -98,9 +100,14 @@ public class upload_documents extends javax.swing.JFrame {
             }
         });
 
-        jCheckBox1.setBackground(new java.awt.Color(255, 255, 255));
-        jCheckBox1.setSelected(true);
-        jCheckBox1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(167, 0, 0)));
+        check_1.setBackground(new java.awt.Color(255, 255, 255));
+        check_1.setSelected(true);
+        check_1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(167, 0, 0)));
+        check_1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                check_1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         jButton2.setText("Subir...");
@@ -110,8 +117,8 @@ public class upload_documents extends javax.swing.JFrame {
             }
         });
 
-        jCheckBox2.setBackground(new java.awt.Color(255, 255, 255));
-        jCheckBox2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(167, 0, 0)));
+        check_2.setBackground(new java.awt.Color(255, 255, 255));
+        check_2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(167, 0, 0)));
 
         jButton3.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         jButton3.setText("Subir...");
@@ -121,12 +128,12 @@ public class upload_documents extends javax.swing.JFrame {
             }
         });
 
-        jCheckBox3.setBackground(new java.awt.Color(255, 255, 255));
-        jCheckBox3.setSelected(true);
-        jCheckBox3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(167, 0, 0)));
-        jCheckBox3.addActionListener(new java.awt.event.ActionListener() {
+        check_3.setBackground(new java.awt.Color(255, 255, 255));
+        check_3.setSelected(true);
+        check_3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(167, 0, 0)));
+        check_3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox3ActionPerformed(evt);
+                check_3ActionPerformed(evt);
             }
         });
 
@@ -141,11 +148,11 @@ public class upload_documents extends javax.swing.JFrame {
             }
         });
 
-        jCheckBox4.setBackground(new java.awt.Color(255, 255, 255));
-        jCheckBox4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(167, 0, 0)));
-        jCheckBox4.addActionListener(new java.awt.event.ActionListener() {
+        check_4.setBackground(new java.awt.Color(255, 255, 255));
+        check_4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(167, 0, 0)));
+        check_4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox4ActionPerformed(evt);
+                check_4ActionPerformed(evt);
             }
         });
 
@@ -160,11 +167,11 @@ public class upload_documents extends javax.swing.JFrame {
             }
         });
 
-        jCheckBox5.setBackground(new java.awt.Color(255, 255, 255));
-        jCheckBox5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(167, 0, 0)));
-        jCheckBox5.addActionListener(new java.awt.event.ActionListener() {
+        check_5.setBackground(new java.awt.Color(255, 255, 255));
+        check_5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(167, 0, 0)));
+        check_5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox5ActionPerformed(evt);
+                check_5ActionPerformed(evt);
             }
         });
 
@@ -179,7 +186,7 @@ public class upload_documents extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jCheckBox2))
+                        .addComponent(check_2))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel2Layout.createSequentialGroup()
@@ -193,11 +200,11 @@ public class upload_documents extends javax.swing.JFrame {
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jCheckBox1))
+                                .addComponent(check_1))
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jCheckBox3))))
+                                .addComponent(check_3))))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
                         .addGap(161, 161, 161)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -206,13 +213,13 @@ public class upload_documents extends javax.swing.JFrame {
                                 .addGap(18, 18, 18)
                                 .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jCheckBox5))
+                                .addComponent(check_5))
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jCheckBox4)))))
+                                .addComponent(check_4)))))
                 .addContainerGap(138, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
@@ -232,25 +239,25 @@ public class upload_documents extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton1)
-                    .addComponent(jCheckBox1, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE))
+                    .addComponent(check_1, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
                     .addComponent(jLabel4)
                     .addComponent(jButton2)
-                    .addComponent(jCheckBox2, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE))
+                    .addComponent(check_2, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                    .addComponent(jCheckBox3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(check_3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel6))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                    .addComponent(jCheckBox4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(check_4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel7))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                    .addComponent(jCheckBox5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(check_5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel8))
                 .addGap(30, 30, 30)
@@ -306,6 +313,13 @@ public class upload_documents extends javax.swing.JFrame {
 
     private void btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActionPerformed
         // TODO add your handling code here:
+        if(check_1.isSelected() && check_2.isSelected() && check_3.isSelected() && check_4.isSelected() && check_5.isSelected()){
+            congratulations np = new congratulations();
+            np.show();
+            this.hide();
+        }else{
+            JOptionPane.showMessageDialog(null, "Debes adjuntar todos los archivos para continuar.");
+        }      
     }//GEN-LAST:event_btnActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -335,9 +349,9 @@ public class upload_documents extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jButton3ActionPerformed
 
-    private void jCheckBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox3ActionPerformed
+    private void check_3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_check_3ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox3ActionPerformed
+    }//GEN-LAST:event_check_3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
@@ -348,9 +362,9 @@ public class upload_documents extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jButton4ActionPerformed
 
-    private void jCheckBox4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox4ActionPerformed
+    private void check_4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_check_4ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox4ActionPerformed
+    }//GEN-LAST:event_check_4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
@@ -361,9 +375,13 @@ public class upload_documents extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jButton5ActionPerformed
 
-    private void jCheckBox5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox5ActionPerformed
+    private void check_5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_check_5ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox5ActionPerformed
+    }//GEN-LAST:event_check_5ActionPerformed
+
+    private void check_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_check_1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_check_1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -403,16 +421,16 @@ public class upload_documents extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton back;
     private javax.swing.JButton btn;
+    private javax.swing.JCheckBox check_1;
+    private javax.swing.JCheckBox check_2;
+    private javax.swing.JCheckBox check_3;
+    private javax.swing.JCheckBox check_4;
+    private javax.swing.JCheckBox check_5;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
-    private javax.swing.JCheckBox jCheckBox1;
-    private javax.swing.JCheckBox jCheckBox2;
-    private javax.swing.JCheckBox jCheckBox3;
-    private javax.swing.JCheckBox jCheckBox4;
-    private javax.swing.JCheckBox jCheckBox5;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;

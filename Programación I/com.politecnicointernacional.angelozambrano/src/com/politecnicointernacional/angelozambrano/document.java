@@ -18,7 +18,6 @@ public class document extends javax.swing.JFrame {
      */
     public document() {
         initComponents();
-        
     }
 
     /**
@@ -40,6 +39,7 @@ public class document extends javax.swing.JFrame {
         btn1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(720, 480));
 
         background.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -57,11 +57,6 @@ public class document extends javax.swing.JFrame {
         document.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         document.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         document.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(167, 0, 0)));
-        document.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                documentActionPerformed(evt);
-            }
-        });
 
         jLabel3.setFont(new java.awt.Font("Segoe UI Light", 0, 18)); // NOI18N
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -153,8 +148,10 @@ public class document extends javax.swing.JFrame {
     private void btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActionPerformed
         // TODO add your handling code here:
         if(document.getText().equals("") || password.getText().equals("")){
-            JOptionPane.showMessageDialog(null, "Todos los campos son obligatorios.");
-        }else{
+        
+            JOptionPane.showMessageDialog(null, "Debes llenar todos los campos para continuar.");
+            
+        }else{       
             questions np = new questions();
             np.show();
             this.hide();
@@ -169,10 +166,6 @@ public class document extends javax.swing.JFrame {
         np.show();
         this.hide();
     }//GEN-LAST:event_btn1ActionPerformed
-
-    private void documentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_documentActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_documentActionPerformed
 
     /**
      * @param args the command line arguments
@@ -203,6 +196,7 @@ public class document extends javax.swing.JFrame {
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
+
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {

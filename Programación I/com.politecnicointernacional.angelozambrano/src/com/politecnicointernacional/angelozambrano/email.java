@@ -147,13 +147,14 @@ public class email extends javax.swing.JFrame {
         // TODO add your handling code here:
         
         if(document.getText().equals("") || password.getText().equals("")){
-            JOptionPane.showMessageDialog(null, "Todos los campos son obligatorios.");
-        }else{
+        
+            JOptionPane.showMessageDialog(null, "Debes llenar todos los campos para continuar.");
+            
+        }else{       
             questions np = new questions();
             np.show();
             this.hide();
         }
-        
     }//GEN-LAST:event_btnActionPerformed
 
     private void backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backActionPerformed
