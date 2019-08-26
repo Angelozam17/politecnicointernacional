@@ -11,12 +11,12 @@ import javax.swing.JOptionPane;
  *
  * @author ANGELO
  */
-public class upload_documents extends javax.swing.JFrame {
+public class Upload_documents extends javax.swing.JFrame {
 
     /**
      * Creates new form upload_documents
      */
-    public upload_documents() {
+    public Upload_documents() {
         initComponents();
     }
 
@@ -306,17 +306,17 @@ public class upload_documents extends javax.swing.JFrame {
 
     private void backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backActionPerformed
         // TODO add your handling code here:
-        info np = new info();
-        np.show();
-        this.hide();
+        Info info = new Info();
+        info.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_backActionPerformed
 
     private void btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActionPerformed
         // TODO add your handling code here:
         if(check_1.isSelected() && check_2.isSelected() && check_3.isSelected() && check_4.isSelected() && check_5.isSelected()){
-            congratulations np = new congratulations();
-            np.show();
-            this.hide();
+            Congratulations congratulation = new Congratulations();
+            congratulation.setVisible(true);
+            this.setVisible(false);
         }else{
             JOptionPane.showMessageDialog(null, "Debes adjuntar todos los archivos para continuar.");
         }      
@@ -325,27 +325,27 @@ public class upload_documents extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         
-        file_chooser np = new file_chooser();
-        np.show();
-        this.hide();
+        File_chooser fChooser = new File_chooser();
+        fChooser.setVisible(true);
+        this.setVisible(false);
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         
-        file_chooser np = new file_chooser();
-        np.show();
-        this.hide();
+        File_chooser fChooser = new File_chooser();
+        fChooser.setVisible(true);
+        this.setVisible(false);
         
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
         
-        file_chooser np = new file_chooser();
-        np.show();
-        this.hide();
+        File_chooser fChooser = new File_chooser();
+        fChooser.setVisible(true);
+        this.setVisible(false);
         
     }//GEN-LAST:event_jButton3ActionPerformed
 
@@ -356,9 +356,9 @@ public class upload_documents extends javax.swing.JFrame {
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
         
-        file_chooser np = new file_chooser();
-        np.show();
-        this.hide();
+        File_chooser fChooser = new File_chooser();
+        fChooser.setVisible(true);
+        this.setVisible(false);
         
     }//GEN-LAST:event_jButton4ActionPerformed
 
@@ -369,9 +369,9 @@ public class upload_documents extends javax.swing.JFrame {
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
         
-        file_chooser np = new file_chooser();
-        np.show();
-        this.hide();
+        File_chooser fChooser = new File_chooser();
+        fChooser.setVisible(true);
+        this.setVisible(false);
         
     }//GEN-LAST:event_jButton5ActionPerformed
 
@@ -400,20 +400,21 @@ public class upload_documents extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(upload_documents.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Upload_documents.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(upload_documents.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Upload_documents.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(upload_documents.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Upload_documents.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(upload_documents.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Upload_documents.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new upload_documents().setVisible(true);
+                new Upload_documents().setVisible(true);
             }
         });
     }

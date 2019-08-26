@@ -9,12 +9,12 @@ package com.politecnicointernacional.angelozambrano;
  *
  * @author ANGELO
  */
-public class authentication extends javax.swing.JFrame {
+public class Authentication extends javax.swing.JFrame {
 
     /**
      * Creates new form institutional_credentials
      */
-    public authentication() {
+    public Authentication() {
         initComponents();
     }
 
@@ -35,7 +35,6 @@ public class authentication extends javax.swing.JFrame {
         btn1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(720, 480));
 
         background.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -132,16 +131,16 @@ public class authentication extends javax.swing.JFrame {
 
     private void btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActionPerformed
         // TODO add your handling code here:
-        email np = new email ();
-        np.show();
-        this.hide();
+        Email email = new Email ();
+        email.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_btnActionPerformed
 
     private void btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1ActionPerformed
         // TODO add your handling code here:
-        document np = new document ();
-        np.show();
-        this.hide();
+        Document document = new Document ();
+        document.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_btn1ActionPerformed
 
     /**
@@ -161,21 +160,23 @@ public class authentication extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(authentication.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Authentication.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(authentication.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Authentication.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(authentication.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Authentication.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(authentication.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Authentication.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new authentication().setVisible(true);
+                new Authentication().setVisible(true);
             }
         });
     }
