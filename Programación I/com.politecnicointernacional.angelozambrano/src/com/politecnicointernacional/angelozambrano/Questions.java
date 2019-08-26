@@ -11,7 +11,7 @@ import javax.swing.JOptionPane;
  *
  * @author ANGELO
  */
-public class questions extends javax.swing.JFrame {
+public class Questions extends javax.swing.JFrame {
 
     /**
      * Creates new form questions
@@ -19,7 +19,7 @@ public class questions extends javax.swing.JFrame {
     
     
     
-    public questions() {
+    public Questions() {
         initComponents();
         graduado.add(graduado_y);
         graduado.add(graduado_n);
@@ -319,9 +319,9 @@ public class questions extends javax.swing.JFrame {
 
     private void backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backActionPerformed
         // TODO add your handling code here:
-        authentication np = new authentication();
-        np.show();
-        this.hide();
+        Authentication authentication = new Authentication();
+        authentication.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_backActionPerformed
 
     private void btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActionPerformed
@@ -340,14 +340,14 @@ public class questions extends javax.swing.JFrame {
         }else if(option_2.equals("Programación de software")){
         
             System.out.println("Felicidades por graduarte de esta carrera.");
-            info np = new info();
-            np.show();
-            this.hide();  
+            Info info = new Info();
+            info.setVisible(true);
+            this.setVisible(false);  
             
         }else{
-            info np = new info();
-            np.show();
-            this.hide();        
+            Info info = new Info();
+            info.setVisible(true);
+            this.setVisible(false);        
         }
         
             
@@ -373,20 +373,21 @@ public class questions extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(questions.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Questions.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(questions.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Questions.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(questions.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Questions.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(questions.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Questions.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
         
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new questions().setVisible(true);
+                new Questions().setVisible(true);
             }
         });
     }
