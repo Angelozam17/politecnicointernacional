@@ -14,7 +14,7 @@ public class hola extends javax.swing.JFrame {
     /**
      * Creates new form hola
      */
-    int array_1[][] = new int[3][3];
+    int array_1[][] = new int[9][9];
     Matriz_2 m2 = new Matriz_2();   
     DecimalFormat f1 = new DecimalFormat("#.00");
     int suma = 0;
@@ -166,14 +166,14 @@ public class hola extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        for(byte i = 0; i < 3; i++){
-            for(byte j = 0; j < 3; j++){
-                //array_1[i][j] = (int) Math.floor(Math.random()*(10));            
+        for(byte i = 0; i < 9; i++){
+            for(byte j = 0; j < 9; j++){
+                array_1[i][j] = (int) Math.floor(Math.random()*(99));            
+                System.out.println("Número " + array_1[i][j]);
+                /*array_1[i][j] = suma;
                 
-                array_1[i][j] = suma;
-                System.out.println(array_1[i][j]);
                 
-                suma++;
+                suma++*/;
             }
         }
         
@@ -182,7 +182,7 @@ public class hola extends javax.swing.JFrame {
         n_mayor.setText("" + m2.mayor(array_1));
         n_menor.setText("" + m2.menor(array_1));
         promedio.setText("" + f1.format(m2.promedio(array_1)));
-        repetidos.setText("" + m2.repetidos(array_1));
+        repetidos.setText("" + m2.findRepeats(array_1, array_1.length * array_1[0].length));
         
         //m2.numeros();
         
