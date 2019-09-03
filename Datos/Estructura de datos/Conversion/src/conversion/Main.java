@@ -5,7 +5,6 @@
  */
 package conversion;
 import java.applet.AudioClip;
-import javax.sound.sampled.Clip;
 /**
  *
  * @author Angelo
