@@ -7,7 +7,7 @@ package com.estructuradedatos.hangedgame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JToggleButton;
-
+import java.applet.AudioClip;
 /**
  *
  * @author ANGELO
@@ -22,6 +22,7 @@ public class Button {
     private String[] words = {"react","compiler", "variable", "constant", "javascript", "angular", "algorithm", "conditional", "array", "loop", "function", "class", "bootstrap", "materialize", "foundation"};
     private char[] characters;
     private String wordFinded[];
+    AudioClip right, winer;
     
       
     public void findWord(JToggleButton button, char letter, JLabel n){    
@@ -29,10 +30,14 @@ public class Button {
         StringBuilder sb = new StringBuilder();
         button.setEnabled(false);
         boolean win = false;
+        right = java.applet.Applet.newAudioClip(getClass().getResource("./right.wav"));
+        winer = java.applet.Applet.newAudioClip(getClass().getResource("./winer.wav"));
+        
         
         for (int i1 = 0; i1 < characters.length; i1++){
             
             if(characters[i1] == letter){ 
+                right.play();
                 numberRight++;  
                 position = (byte) i1;
                 //System.out.println(letter + " está en la position " + position);
@@ -40,9 +45,11 @@ public class Button {
                 wordFinded[i1] = letter + " ";
                 
                 sb.append(wordFinded[i1]);
-                numberAttemps++;                                    
+                numberAttemps++;  
+                
                 
             }else{
+                //wrong.play();
                 sb.append(wordFinded[i1]);
             } 
             
@@ -59,6 +66,7 @@ public class Button {
             win = true;  
         }
         if (win) {
+            winer.play();
             JOptionPane.showMessageDialog(null, "Felicidades, has ganado!");
         }
     }

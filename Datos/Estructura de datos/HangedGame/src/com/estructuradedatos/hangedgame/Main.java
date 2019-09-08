@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package com.estructuradedatos.hangedgame;
-
+import java.applet.AudioClip;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 /**
@@ -19,13 +19,15 @@ public class Main extends javax.swing.JFrame {
     
     
     Button button = new Button();
-    
+    AudioClip reset = java.applet.Applet.newAudioClip(getClass().getResource("./reset.wav"));
+    AudioClip gameover = java.applet.Applet.newAudioClip(getClass().getResource("./gameover.wav"));
        
        
     public Main() {
         initComponents();
         wordRandom();
         button.showWord(word_label);
+        
         
         
         
@@ -44,6 +46,7 @@ public class Main extends javax.swing.JFrame {
     public void updateAttemps(JLabel n){
         n.setText("" + button.getNumberAttemps());
         if (button.getNumberAttemps() <= 0) {
+            gameover.play();
             JOptionPane.showMessageDialog(null, "¡Has perdido!\nLa palabra era " + String.valueOf(button.getCharacters()).toUpperCase()); 
             
             Main main = new Main();
@@ -734,6 +737,7 @@ public class Main extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        reset.play();
         Main main = new Main();
         this.setVisible(false);
         main.setVisible(true);
