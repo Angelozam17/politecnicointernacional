@@ -17,35 +17,118 @@ public class Button {
     private int numberAttemps;
     private int numberRight;
     private int numberWrong;
-    
-    public Button(){
-        
-    } 
-    
-    
-    public void findWord(JToggleButton button, char[] charac, char letter){    
-        numberWrong = numberAttemps - numberRight;
-        
-        for (int i1 = 0; i1 < charac.length; i1++){
-            
-            if(charac[i1] == letter){ 
-                numberRight++;  
-            }       
-        }      
-        numberAttemps--;
-        button.setEnabled(false);
-    }
-    
-    public void UpdateAttemps(JLabel n){
-        if (numberAttemps >= 0) {
-            n.setText("" + getNumberAttemps());
-        }else{
-            JOptionPane.showMessageDialog(null, "¡Has perdido!");
-        }      
-    }
+    private byte position;
+    private String wordConverted;
+    private String[] words = {"react","compiler", "variable", "constant", "javascript", "angular", "algorithm", "conditional", "array", "loop", "function", "class", "bootstrap", "materialize", "foundation"};
+    private char[] characters;
+    private String wordFinded[];
     
       
+    public void findWord(JToggleButton button, char letter, JLabel n){    
+        numberWrong = numberAttemps - numberRight;
+        StringBuilder sb = new StringBuilder();
+        button.setEnabled(false);
+        boolean win = false;
+        
+        for (int i1 = 0; i1 < characters.length; i1++){
+            
+            if(characters[i1] == letter){ 
+                numberRight++;  
+                position = (byte) i1;
+                //System.out.println(letter + " está en la position " + position);
+                
+                wordFinded[i1] = letter + " ";
+                
+                sb.append(wordFinded[i1]);
+                numberAttemps++;                                    
+                
+            }else{
+                sb.append(wordFinded[i1]);
+            } 
+            
+        }  
+        wordConverted = sb.toString();
+        n.setText("" + wordConverted.toUpperCase());
+        numberAttemps--;  
+        
+        for (String wordFinded1 : wordFinded) {
+            if (wordFinded1.equals("_ ")) {
+                win = false;
+                break;
+            }
+            win = true;  
+        }
+        if (win) {
+            JOptionPane.showMessageDialog(null, "Felicidades, has ganado!");
+        }
+    }
+    
+
+    
+    public void showWord(JLabel n){
+
+        StringBuilder sb = new StringBuilder();
+        wordFinded = new String[characters.length];
+        
+        for (int i1 = 0; i1 < characters.length; i1++) {
+            
+            //System.out.print("["+ i1 +"]" + characters[i1] + " "); 
+                      
+            wordFinded[i1] = "_ "; 
+            
+            sb.append(wordFinded[i1]);
+        }
+        
+        System.out.println("");
+        wordConverted = sb.toString();
+        n.setText("" + wordConverted);        
+    }
+    
+    
+    
+
     //GETTERS Y SETTERS
+    
+    public String[] getWordFinded() {
+        return wordFinded;
+    }
+    
+    public void setWordFinded(String[] wordFinded) {
+        this.wordFinded = wordFinded;
+    }
+
+    public char[] getCharacters() {
+        return characters;
+    }
+    
+    public void setCharacters(char[] characters) {
+        this.characters = characters;
+    }
+
+    public String[] getWords() {
+        return words;
+    }
+    
+    public void setWords(String[] words) {
+        this.words = words;
+    }
+
+    public byte getPosition() {
+        return position;
+    }
+
+    public void setPosition(byte position) {
+        this.position = position;
+    }
+
+    public String getWordConverted() {
+        return wordConverted;
+    }
+    
+    public void setWordConverted(String wordConverted) {    
+        this.wordConverted = wordConverted;
+    }
+
     public int getNumberAttemps() {
         return numberAttemps;
     }
