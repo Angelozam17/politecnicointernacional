@@ -100,6 +100,7 @@ public class Main extends javax.swing.JFrame {
         nAttemps = new javax.swing.JLabel();
         word_label = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        guess = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -432,6 +433,14 @@ public class Main extends javax.swing.JFrame {
             }
         });
 
+        guess.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
+        guess.setText("Conozco la palabra");
+        guess.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                guessActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -483,6 +492,8 @@ public class Main extends javax.swing.JFrame {
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addComponent(nAttemps)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(guess)
+                                        .addGap(18, 18, 18)
                                         .addComponent(jButton1)
                                         .addGap(48, 48, 48))
                                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -582,7 +593,9 @@ public class Main extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(nAttemps, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addComponent(jButton1))
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jButton1)
+                        .addComponent(guess)))
                 .addContainerGap(33, Short.MAX_VALUE))
         );
 
@@ -743,6 +756,11 @@ public class Main extends javax.swing.JFrame {
         main.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void guessActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_guessActionPerformed
+        // TODO add your handling code here:
+        button.guessWord(guess, nAttemps);
+    }//GEN-LAST:event_guessActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -787,6 +805,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JToggleButton e;
     private javax.swing.JToggleButton f;
     private javax.swing.JToggleButton g;
+    private javax.swing.JButton guess;
     private javax.swing.JToggleButton h;
     private javax.swing.JToggleButton i;
     private javax.swing.JToggleButton j;

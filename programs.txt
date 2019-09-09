@@ -1,0 +1,23 @@
+Scene Builder 2.0
+https://gluonhq.com/products/scene-builder/#download
+
+NetBeans 8.2
+https://netbeans.org/downloads/8.2/
+
+MySQL worbench 8.0.17
+https://dev.mysql.com/downloads/file/?id=488566
+
+Git 2.23.0
+https://git-scm.com/download/win
+
+XAMPP 7.3.9
+https://www.apachefriends.org/xampp-files/7.3.9/xampp-windows-x64-7.3.9-0-VC15-installer.exe
+
+Visual Studio Code
+https://code.visualstudio.com/Download
+
+Chrome Beta
+https://www.google.com/intl/es/chrome/beta/
+
+Spotify
+https://www.spotify.com/cl/download/windows/

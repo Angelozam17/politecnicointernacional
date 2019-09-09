@@ -8,6 +8,7 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JToggleButton;
 import java.applet.AudioClip;
+import javax.swing.JButton;
 /**
  *
  * @author ANGELO
@@ -22,16 +23,17 @@ public class Button {
     private String[] words = {"react","compiler", "variable", "constant", "javascript", "angular", "algorithm", "conditional", "array", "loop", "function", "class", "bootstrap", "materialize", "foundation"};
     private char[] characters;
     private String wordFinded[];
-    AudioClip right, winer;
-    
+    AudioClip right, winer, denied;
+    boolean win = false;
       
     public void findWord(JToggleButton button, char letter, JLabel n){    
         numberWrong = numberAttemps - numberRight;
         StringBuilder sb = new StringBuilder();
         button.setEnabled(false);
-        boolean win = false;
+        
         right = java.applet.Applet.newAudioClip(getClass().getResource("./right.wav"));
         winer = java.applet.Applet.newAudioClip(getClass().getResource("./winer.wav"));
+        denied = java.applet.Applet.newAudioClip(getClass().getResource("./denied.wav"));
         
         
         for (int i1 = 0; i1 < characters.length; i1++){
@@ -90,6 +92,24 @@ public class Button {
         System.out.println("");
         wordConverted = sb.toString();
         n.setText("" + wordConverted);        
+    }
+    
+    public void guessWord(JButton n, JLabel m){
+        String word;
+        word = JOptionPane.showInputDialog("La palabra es...");
+        
+        try{
+            if (word.equals(String.valueOf(characters))) {
+            winer.play();
+            JOptionPane.showMessageDialog(null, "Felicidades, has ganado!\nLa palabra sí era " + word.toUpperCase());
+            }else{
+                denied.play();
+                numberAttemps--; 
+            }
+        }catch(NullPointerException e){
+            JOptionPane.showMessageDialog(null, "Antes de adivinar elige al menos una letra.");
+        }
+        m.setText("" + numberAttemps); 
     }
     
     
