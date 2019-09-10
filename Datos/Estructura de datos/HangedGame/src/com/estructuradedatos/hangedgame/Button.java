@@ -18,7 +18,6 @@ public class Button {
     private int numberAttemps;
     private int numberRight;
     private int numberWrong;
-    private byte position;
     private String wordConverted;
     private String[] words = {"react","compiler", "variable", "constant", "javascript", "angular", "algorithm", "conditional", "array", "loop", "function", "class", "bootstrap", "materialize", "foundation"};
     private char[] characters;
@@ -41,7 +40,6 @@ public class Button {
             if(characters[i1] == letter){ 
                 right.play();
                 numberRight++;  
-                position = (byte) i1;
                 //System.out.println(letter + " está en la position " + position);
                 
                 wordFinded[i1] = letter + " ";
@@ -139,14 +137,6 @@ public class Button {
     
     public void setWords(String[] words) {
         this.words = words;
-    }
-
-    public byte getPosition() {
-        return position;
-    }
-
-    public void setPosition(byte position) {
-        this.position = position;
     }
 
     public String getWordConverted() {
