@@ -34,7 +34,15 @@ public class SavingsAccount {
         int subtract;
         subtract  = Integer.parseInt(JOptionPane.showInputDialog("¿Cuánto dinero deseas retirar?"));
         
-        saldo = saldo - subtract;
+        
+        
+        
+        
+        if (subtract > saldo) {
+            JOptionPane.showMessageDialog(null, "No puedes retirar esa cantidad.");
+        }else{
+            saldo = saldo - subtract;
+        }
     
     }
     
